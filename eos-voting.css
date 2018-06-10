@@ -43,6 +43,10 @@ body {
 	background-color:#5da1ba;
 }
 
+.btn {
+	outline: none;
+}
+
 
 .box > .icon { text-align: center; position: relative; }
 .box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #1f294c; vertical-align: middle; }
