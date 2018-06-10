@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const networks = [
     {
         name: "Main Net",
@@ -165,7 +167,7 @@ voteSuccess(res) {
           table.append(tr);
           tr.append(this.addTd('<input name="bpVote" type="checkbox" value="'+row.owner+'" '+ (row.owner === promoted ? 'checked' : '') + ' >'));
           tr.append(this.addTd("<a href='"+row.url+"'>"+row.owner+"</a>"));
-          tr.append(this.addTd(row.location));     
+          // tr.append(this.addTd(row.location));     
           tr.append(this.addTd(this.cleanNumber(row.total_votes)));
           tr.append(this.addTd(this.createProgressBar(this.cleanPercent(this.voteNumber(row.total_votes)/this.votes))));
         }
