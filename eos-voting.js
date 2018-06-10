@@ -266,6 +266,9 @@ voteSuccess(res) {
 
      document.getElementById("cleos_name").value = accountName;
      this.updateAccountName();
+     document.getElementById("vote_button").innerHTML = "Vote with Scatter";
+     inited = true;
+
    });
 //  });
 });
@@ -276,10 +279,20 @@ voteSuccess(res) {
 
 
 var voter = new eosVoter();
+var inited = false;
 document.getElementById("vote_button").addEventListener('click', function() {
-  voter.vote()
-});
-document.addEventListener('scatterLoaded', scatterExtension => {  
+  if(inited){
+    voter.vote();
+    return;
+  }
+  
   voter.load();
+
 });
+function initScatter(){
+  voter.load();
+}
+// document.addEventListener('scatterLoaded', scatterExtension => {  
+//   voter.load();
+// });
 voter.refreshBPs();

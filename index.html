@@ -22,6 +22,15 @@
 	</header>
 	<div class="container bg-white">
 		<div class="row">
+			<div class="download-panel card">
+				<div class="card-body">
+						<a href="https://storage.googleapis.com/liquideos/voting-app/builds/liquideos-vote-macos-1.0.0.zip"><button class="btn btn-dark btn-lg"><i class="fab fa-apple"></i>&nbsp;&nbsp; Download for Mac</button></a>
+						<a href="https://storage.googleapis.com/liquideos/voting-app/builds/liquideos-vote-windows-1.0.0.zip"><button class="btn btn-dark btn-lg"><i class="fab fa-windows"></i>&nbsp;&nbsp; Download for Windows</button></a>
+						<a href="https://github.com/bancorprotocol/liquideos-voting-app"><button class="btn btn-dark btn-lg"><i class="fab fa-github"></i>&nbsp;&nbsp; Source &amp; Releases at GitHub</button></a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="alert alert-info">
                 <h4>
                     Downloadable EOS Voting Tool</h4>
@@ -33,9 +42,7 @@
 			            <li>Scatter, the most popular EOS wallet, did not receive an official endorsement from the community as a safe voting tool and many voters have reported having issues importing their accounts. </li>
 			            <li>The alternative web voting interface below relies on Scatter, and even though your private key never leaves your browser, we wanted to provide you an <strong>extra level of security</strong> through an application that runs outside the browser and the potential reach of toolbars, botnets and other bad actors.</li>
 					</ul>
-					<a href="https://storage.googleapis.com/liquideos/voting-app/builds/liquideos-vote-macos-1.0.0.zip"><button class="btn btn-light"><i class="fab fa-apple"></i>&nbsp;&nbsp; Download for Mac</button></a>
-					<a href="https://storage.googleapis.com/liquideos/voting-app/builds/liquideos-vote-windows-1.0.0.zip"><button class="btn btn-light"><i class="fab fa-windows"></i>&nbsp;&nbsp; Download for Windows</button></a>
-					<a href="https://github.com/bancorprotocol/liquideos-voting-app"><button class="btn btn-light"><i class="fab fa-github"></i>&nbsp;&nbsp; Source at GitHub</button></a>
+
 					<!-- <p class="text-center"><a href='https://github.com/bancorprotocol/liquideos-voting-app'><img width="75" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png">Download from GitHub</a></p> -->
 				</p>
             </div>
@@ -95,7 +102,7 @@
 								Once you have a key and identity configured on scatter:
 								Edit your identity, under the account section, select the endpoint for the mainnet and the key you just imported and click import. 
 								Then, select the account ending with @active. click "Use Selected Account" and click save to save the Identity.
-								Now that you are ready to vote, please refresh this page.
+								Now that you are ready to vote, please click <a href="#" onclick="initScatter()">here</a> or the "Init Scatter" button.
 							</p>
 								
 							<!--<div class="more">
@@ -112,7 +119,11 @@
 			
 	    
 		</div>
+
+
+
 		<div class="card mt-3 mb-3">
+
 			<div class="card-body">
 				<h5 class="card-title">Command Line EOS App <small>This requires the EOS dev environment installed on your local machine.</small></h5>				
 				<hr>
@@ -136,9 +147,10 @@
 
 		</div>
 
-		<div class="mb-2">
-			<button id="vote_button" class="btn btn-primary float-left pl-5 pr-5">
-				Vote with Scatter
+		<div class="mb-2">	
+				
+			<button id="vote_button" class="btn btn-primary pl-5 pr-5">
+				Init Scatter
 			</button>
 			<div class="form-group col-sm-3 float-right pr-0">
 				<input type="text" id="search" class="form-control" onkeyup="voter.search()" placeholder="Search..."/>

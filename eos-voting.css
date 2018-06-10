@@ -62,3 +62,10 @@ body {
 .box > .icon > .info > .more a { font-family: "Roboto",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
 .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #6bb9d5; }
 .box .space { height: 30px; }
+
+.download-panel{
+	text-align: center;
+	margin: 10px;
+    width: 100%;
+
+}
