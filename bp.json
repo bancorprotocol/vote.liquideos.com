@@ -1,0 +1,71 @@
+
+{
+  "producer_account_name": "eosliquideos",
+  "producer_public_key": "EOS4v1n2j5kXbCum8LLEc8zQLpeLK9rKVFmsUgLCWgMDN38P6PcrW",
+  "org": {
+    "candidate_name": "LiquidEOS",
+    "website": "https://liquideos.com/",
+    "code_of_conduct":"",
+    "email":"block_producer@liquideos.com",
+    "branding":{
+      "logo_256":"",
+      "logo_1024":"",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "Israel",
+      "country": "",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github":"",
+      "reddit": "",
+      "keybase": "tmuskal",
+      "telegram": "",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "",
+        "country": "Israel",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": false,
+      "p2p_endpoint": "node2.liquideos.com:9876",
+      "api_endpoint": "http://node2.liquideos.com:8888",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "",
+        "country": "Israel",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": false,
+      "p2p_endpoint": "node1.liquideos.com:9876",
+      "api_endpoint": "http://node1.liquideos.com:8888",
+      "ssl_endpoint": ""
+    },
+    {  
+	"location": {
+        "name": "",
+        "country": "Israel",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}
