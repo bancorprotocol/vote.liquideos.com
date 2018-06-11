@@ -174,13 +174,8 @@ var eosVoter = class {
     var config = {
       chainId: network.chainId, // 32 byte (64 char) hex string          
       expireInSeconds: 60,
+      httpEndpoint: "http" + (network.secured ? 's' : '') + '://'  + network.host + ':' + network.port
     };
-    if (network.secured) {
-      config.httpEndpoint = 'https://' + network.host + ':' + network.port;
-    }
-    else {
-      config.httpEndpoint = 'http://' + network.host + ':' + network.port;
-    }
 
     this.eosPublic = new Eos(config);
     this.populateBPs().then(res => {
@@ -299,6 +294,7 @@ var eosVoter = class {
       host: network.host,
       port: network.scatterPort || network.port,
       chainId: network.chainId,
+      httpEndpoint: "http://" + network.host + ':' + network.port
       expireInSeconds: 120,
     }).then((selectedNetwork) => {
       const requiredFields = { accounts: [{ blockchain: 'eos', chainId: network.chainId }] };
@@ -306,6 +302,7 @@ var eosVoter = class {
       blockchain: 'eos',
       host: network.host,
       port:  network.port,
+      httpEndpoint: "http" + (network.secured ? 's' : '') + '://'  + network.host + ':' + network.port
       chainId: network.chainId,
       expireInSeconds: 120,
     }, Eos, {}, network.secured ? 'https' : undefined);
