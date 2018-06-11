@@ -78,14 +78,7 @@ if (networkParam)
 const network = networks[defaultIndex];
 
 var eosVoter = class {
-  constructor() {
-    this.network = {
-      blockchain: 'eos',
-      host: network.host,
-      port: network.scatterPort || network.port,
-      chainId: network.chainId,
-      expireInSeconds: 120,
-    }
+  constructor() {    
     this.eos = null;
     document.getElementById("cleos_name").onkeyup = this.updateAccountName;
   }
@@ -96,8 +89,7 @@ var eosVoter = class {
     return td;
   }
 
-  vote(errorHandler, successHandler) {
-    console.log(this.network);
+  vote(errorHandler, successHandler) {    
     document.getElementById("vote_button").disabled = true;
     this.verifyScatter();
     this.working = true;
@@ -302,13 +294,23 @@ var eosVoter = class {
   }
   load() {
     this.verifyScatter();
-    return scatter.suggestNetwork(this.network).then((selectedNetwork) => {
-      console.log("selectedNetwork", selectedNetwork);
+    return scatter.suggestNetwork({
+      blockchain: 'eos',
+      host: network.host,
+      port: network.scatterPort || network.port,
+      chainId: network.chainId,
+      expireInSeconds: 120,
+    }).then((selectedNetwork) => {
       const requiredFields = { accounts: [{ blockchain: 'eos', chainId: network.chainId }] };
-      this.eos = this.scatter.eos(this.network, Eos, {}, network.secured && ! network.scatterPort ? 'https' : undefined);
+      this.eos = this.scatter.eos({
+      blockchain: 'eos',
+      host: network.host,
+      port:  network.port,
+      chainId: network.chainId,
+      expireInSeconds: 120,
+    }, Eos, {}, network.secured && ! network.scatterPort ? 'https' : undefined);
       //scatter.authenticate().then(()=>{
       return scatter.getIdentity(requiredFields).then(identity => {
-        console.log("identity", identity);
         if (identity.accounts.length === 0) return
         var accountName = identity.accounts[0].name;
 
