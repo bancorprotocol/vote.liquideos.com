@@ -34,6 +34,7 @@ const networks = [
     name: "Main Net",
     host: "node2.liquideos.com",
     port: 8888,
+    scatterPort: 8888,
     chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
     secured: false
   },
@@ -41,6 +42,15 @@ const networks = [
     name: "Main Net SSL",
     host: "node2.liquideos.com",
     port: 8883,
+    scatterPort: 8888,
+    chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    secured: true
+  },
+  {
+    name: "Main Net SSL - for scatter over ssl",
+    host: "node2.liquideos.com",
+    port: 8883,
+    scatterPort: 8883,
     chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
     secured: true
   },
@@ -51,7 +61,7 @@ const networks = [
     port: 8888
   }
 ];
-var defaultIndex = 0;
+var defaultIndex = 1;
 if(this.location.protocol === "https:"){
   defaultIndex = 1;
 }
@@ -74,7 +84,7 @@ var eosVoter = class {
     this.network = {
       blockchain: 'eos',
       host: network.host,
-      port: network.port,
+      port: network.scatterPort || network.port,
       chainId: network.chainId,
       expireInSeconds: 120,
     }
