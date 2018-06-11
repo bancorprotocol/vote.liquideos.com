@@ -33,8 +33,7 @@ const networks = [
   {
     name: "Main Net",
     host: "node2.liquideos.com",
-    port: 8888,
-    scatterPort: 8888,
+    port: 8888,    
     chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
     secured: false
   },
@@ -61,7 +60,7 @@ const networks = [
     port: 8888
   }
 ];
-var defaultIndex = 1;
+var defaultIndex = 0;
 if(this.location.protocol === "https:"){
   defaultIndex = 1;
 }
@@ -307,7 +306,7 @@ var eosVoter = class {
     return scatter.suggestNetwork(this.network).then((selectedNetwork) => {
       console.log("selectedNetwork", selectedNetwork);
       const requiredFields = { accounts: [{ blockchain: 'eos', chainId: network.chainId }] };
-      this.eos = this.scatter.eos(this.network, Eos, {}, network.secured ? 'https' : undefined);
+      this.eos = this.scatter.eos(this.network, Eos, {}, network.secured && ! network.scatterPort ? 'https' : undefined);
       //scatter.authenticate().then(()=>{
       return scatter.getIdentity(requiredFields).then(identity => {
         console.log("identity", identity);
@@ -327,15 +326,16 @@ var eosVoter = class {
 var inited = false;
 var voter = new eosVoter();
 document.getElementById("vote_button").addEventListener('click', function () {
-  if(!inited){
-    initScatter();      
-    return;
-  }
-  voter.vote();
+  initScatterOrVote();
 });
 
-function initScatter(){
-  voter.load()
+// this is actually initScatterOrVote now
+function initScatterOrVote(){
+  if(!inited){
+    voter.load();
+    return;
+  }
+  voter.vote();  
 }
 
 document.addEventListener('scatterLoaded', scatterExtension => {
