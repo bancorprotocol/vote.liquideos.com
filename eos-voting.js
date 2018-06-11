@@ -302,7 +302,7 @@ var eosVoter = class {
       blockchain: 'eos',
       host: network.host,
       port:  network.port,
-      httpEndpoint: "http" + (network.secured ? 's' : '') + '://'  + network.host + ':' + network.port,
+      // httpEndpoint: "http" + (network.secured ? 's' : '') + '://'  + network.host + ':' + network.port,
       chainId: network.chainId,
       expireInSeconds: 120,
     }, Eos, {}, network.secured ? 'https' : undefined);
