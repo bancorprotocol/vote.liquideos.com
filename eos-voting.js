@@ -296,17 +296,28 @@ var eosVoter = class {
 
         document.getElementById("cleos_name").value = accountName;
         this.updateAccountName();
+        document.getElementById("vote_button").innerHTML = "Vote with Scatter";
+        inited = true;
+
       });
       //  });
     });
   }
 }
-
-
+var inited = false;
 var voter = new eosVoter();
 document.getElementById("vote_button").addEventListener('click', function () {
-  voter.vote()
+  if(!inited){
+    initScatter();      
+    return;
+  }
+  voter.vote();
 });
+
+function initScatter(){
+  voter.load()
+}
+
 document.addEventListener('scatterLoaded', scatterExtension => {
   voter.load();
 });
