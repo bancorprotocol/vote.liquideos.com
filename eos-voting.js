@@ -48,8 +48,7 @@ const networks = [
   {
     name: "Main Net SSL - for scatter over ssl",
     host: "node2.liquideos.com",
-    port: 8883,
-    scatterPort: 8883,
+    port: 8883,    
     chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
     secured: true
   },
