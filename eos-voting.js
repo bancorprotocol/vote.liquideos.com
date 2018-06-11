@@ -52,6 +52,9 @@ const networks = [
   }
 ];
 var defaultIndex = 0;
+if(this.location.protocol === "https:"){
+  defaultIndex = 1;
+}
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
   name = name.replace(/[\[\]]/g, "\\$&");
@@ -173,7 +176,7 @@ var eosVoter = class {
       expireInSeconds: 60,
     };
     if (network.secured) {
-      config.httpsEndpoint = 'https://' + network.host + ':' + network.port;
+      config.httpEndpoint = 'https://' + network.host + ':' + network.port;
     }
     else {
       config.httpEndpoint = 'http://' + network.host + ':' + network.port;
