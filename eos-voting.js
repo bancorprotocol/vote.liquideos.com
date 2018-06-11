@@ -38,6 +38,13 @@ const networks = [
     secured: false
   },
   {
+    name: "Main Net SSL",
+    host: "node2.liquideos.com",
+    port: 8883,
+    chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+    secured: true
+  },
+  {
     name: "Jungle Testnet",
     host: "dolphin.eosblocksmith.io",
     chainId: "038f4b0fc8ff18a4f0842a8f0564611f6e96e8535901dd45e43ac8691a1c4dca",
@@ -286,7 +293,7 @@ var eosVoter = class {
     this.verifyScatter();
     return scatter.suggestNetwork(this.network).then((selectedNetwork) => {
       console.log("selectedNetwork", selectedNetwork);
-      const requiredFields = { accounts: [{ blockchain: 'eos', host: network.host, port: network.port }] };
+      const requiredFields = { accounts: [{ blockchain: 'eos', chainId: network.chainId }] };
       this.eos = this.scatter.eos(this.network, Eos, {}, network.secured ? 'https' : undefined);
       //scatter.authenticate().then(()=>{
       return scatter.getIdentity(requiredFields).then(identity => {
@@ -319,7 +326,8 @@ function initScatter(){
 }
 
 document.addEventListener('scatterLoaded', scatterExtension => {
-  voter.load();
+  document.getElementById("vote_button").innerHTML = "Init Scatter"
+  document.getElementById("vote_button").disabled = false;  
 });
 voter.refreshBPs();
 
