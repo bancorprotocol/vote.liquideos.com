@@ -294,7 +294,7 @@ var eosVoter = class {
       host: network.host,
       port: network.scatterPort || network.port,
       chainId: network.chainId,
-      // httpEndpoint: "http://" + network.host + ':' + network.port,
+      httpEndpoint: "http://" + network.host + ':' + network.port,
       expireInSeconds: 120,
     }).then((selectedNetwork) => {
       const requiredFields = { accounts: [{ blockchain: 'eos', chainId: network.chainId }] };
