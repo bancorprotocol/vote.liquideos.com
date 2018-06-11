@@ -308,7 +308,7 @@ var eosVoter = class {
       port:  network.port,
       chainId: network.chainId,
       expireInSeconds: 120,
-    }, Eos, {}, (network.secured && (!network.scatterPort)) ? 'https' : undefined);
+    }, Eos, {}, network.secured ? 'https' : undefined);
       //scatter.authenticate().then(()=>{
       return scatter.getIdentity(requiredFields).then(identity => {
         if (identity.accounts.length === 0) return
