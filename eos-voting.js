@@ -33,22 +33,22 @@ const networks = [
   {
     name: "Main Net",
     host: "node2.liquideos.com",
-    port: 8888,    
+    port: 80,    
     chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
     secured: false
   },
   {
     name: "Main Net SSL",
     host: "node2.liquideos.com",
-    port: 8883,
-    scatterPort: 8888,
+    port: 443,
+    scatterPort: 80,
     chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
     secured: true
   },
   {
     name: "Main Net SSL - for scatter over ssl",
     host: "node2.liquideos.com",
-    port: 8883,    
+    port: 443,    
     chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
     secured: true
   },
