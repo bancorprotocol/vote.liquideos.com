@@ -14,7 +14,7 @@
     },
     "location": {
       "name": "Israel",
-      "country": "",
+      "country": "Israel",
       "latitude": 0,
       "longitude": 0
     },
@@ -33,31 +33,31 @@
   "nodes": [
     {
       "location": {
-        "name": "",
+        "name": "Israel - Center",
         "country": "Israel",
         "latitude": 0,
         "longitude": 0
       },
       "is_producer": false,
       "p2p_endpoint": "node2.liquideos.com:9876",
-      "api_endpoint": "http://node2.liquideos.com:8888",
-      "ssl_endpoint": ""
+      "api_endpoint": "http://node2.liquideos.com:80",
+      "ssl_endpoint": "https://node2.liquideos.com:443"
     },
     {
       "location": {
-        "name": "",
+        "name": "Israel - North",
         "country": "Israel",
         "latitude": 0,
         "longitude": 0
       },
       "is_producer": false,
       "p2p_endpoint": "node1.liquideos.com:9876",
-      "api_endpoint": "http://node1.liquideos.com:8888",
-      "ssl_endpoint": ""
+      "api_endpoint": "http://node2.liquideos.com:80",
+      "ssl_endpoint": "https://node2.liquideos.com:443"
     },
     {  
 	"location": {
-        "name": "",
+        "name": "Israel",
         "country": "Israel",
         "latitude": 0,
         "longitude": 0
