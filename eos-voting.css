@@ -43,11 +43,45 @@ body {
 	background-color:#5da1ba;
 }
 
+.web-interface-title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
 .btn {
 	outline: none;
 }
 
+.voting-option {
+	padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    border-radius: 2px;
+    border: 1px solid #e0e0e0;
+	background: rgba(0, 0, 0, 0.04);
+	text-align: left;
+	margin-left: 16px;
+	margin-top: 16px;
+}
+.alert-voting-option {
+	text-align: left;
+}
+.btn-windows {
+	background: #03A9F4;
+	border: none;
+	margin-left: 16px;
+	margin-right: 16px;
+}
 
+.btn-mac {
+	background: #969696;
+	border: none;
+}
+
+.btn-github {
+	background: black;
+	border: none;
+}
 .box > .icon { text-align: center; position: relative; }
 .box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #1f294c; vertical-align: middle; }
 .box > .icon:hover > .image { background: #334377; }

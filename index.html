@@ -27,27 +27,48 @@
 	</header>
 	<div class="container bg-white">
 		<div class="row">
-			<div class="download-panel card">
+			<div class="download-panel">
+				<p class="voting-option">Voting Option 1</p>
 				<div class="card-body">
 					<h2>Please download our secured EOS Voting desktop application:</h2>
 					<a href="https://storage.googleapis.com/liquideos/voting-app/builds/liquideos-vote-macos-1.0.0.zip">
-						<button class="btn btn-dark btn-lg">
+						<button class="btn btn-dark btn-lg btn-mac">
 							<i class="fab fa-apple"></i>&nbsp;&nbsp; Download for Mac</button>
 					</a>
 					<a href="https://storage.googleapis.com/liquideos/voting-app/builds/liquideos-vote-windows-1.0.0.zip">
-						<button class="btn btn-dark btn-lg">
+						<button class="btn btn-dark btn-lg btn-windows">
 							<i class="fab fa-windows"></i>&nbsp;&nbsp; Download for Windows</button>
 					</a>
 					<a href="https://github.com/bancorprotocol/liquideos-voting-app">
-						<button class="btn btn-dark btn-lg">
+						<button class="btn btn-dark btn-lg btn-github">
 							<i class="fab fa-github"></i>&nbsp;&nbsp; Source &amp; Releases at GitHub</button>
 					</a>
-					<h4>Or use the web interface below</h4>
+					<h4 class="web-interface-title">Or use the web interface below</h4>
+
+					<div class="alert alert-info alert-voting-option">
+							<h4>
+								Downloadable EOS Voting Tool</h4>
+							<p>
+								We have decided to create a standalone EOS voting application that signs your transactions locally with your private key
+								and then executes the transaction on the blockchain. The reason for this is multi-fold:
+			
+								<ul>
+									<li>The only EOS voting tool that is endorsed is a command line application which is difficult to install and use and will
+										greatly limit access to voting.</li>
+									<li>Scatter, the most popular EOS wallet, did not receive an official endorsement from the community as a safe voting tool
+										and many voters have reported having issues importing their accounts. </li>
+									<li>The alternative web voting interface below relies on Scatter, and even though your private key never leaves your browser,
+										we wanted to provide you an
+										<strong>extra level of security</strong> through an application that runs outside the browser and the potential reach of toolbars,
+										botnets and other bad actors.</li>
+								</ul>
+							</p>
+						</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="alert alert-info">
+			<!-- <div class="alert alert-info">
 				<h4>
 					Downloadable EOS Voting Tool</h4>
 				<p>
@@ -64,11 +85,10 @@
 							<strong>extra level of security</strong> through an application that runs outside the browser and the potential reach of toolbars,
 							botnets and other bad actors.</li>
 					</ul>
-
-					<!-- <p class="text-center"><a href='https://github.com/bancorprotocol/liquideos-voting-app'><img width="75" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png">Download from GitHub</a></p> -->
 				</p>
-			</div>
+			</div> -->
 		</div>
+		<p class="voting-option">Voting Option 2</p>
 		<div class="row">
 			<!-- Boxes de Acoes -->
 
@@ -130,16 +150,15 @@
 								Scatter so that it can sign transactions on your behalf on the blockchain.
 							</p>
 							<p>
-								Once you have a key and identity configured on scatter:<br/>
-								click <a
-								 href="#" onclick="initScatterOrVote()">here</a> or the "Init Scatter" to add the network endpoint for the eos blockchain.
-								</p>
-								<p>
-								Then, open scatter and edit your identity, under the account section, select the endpoint
-								for the mainnet chain (starts with aca3...) and the name of the key you just imported and click import. Then, select the account ending with @active. click
-								"Use Selected Account" and click save to save the Identity. Now that you are ready to vote, please click
-								<a
-								 href="#" onclick="initScatterOrVote()">here</a> or the "Init Scatter/Vote" button.
+								Once you have a key and identity configured on scatter:
+								<br/> click
+								<a href="#" onclick="initScatterOrVote()">here</a> or the "Init Scatter" to add the network endpoint for the eos blockchain.
+							</p>
+							<p>
+								Then, open scatter and edit your identity, under the account section, select the endpoint for the mainnet chain (starts with
+								aca3...) and the name of the key you just imported and click import. Then, select the account ending with @active.
+								click "Use Selected Account" and click save to save the Identity. Now that you are ready to vote, please click
+								<a href="#" onclick="initScatterOrVote()">here</a> or the "Init Scatter/Vote" button.
 							</p>
 
 							<!--<div class="more">
