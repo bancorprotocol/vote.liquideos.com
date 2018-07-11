@@ -5,7 +5,7 @@
   "org": {
     "candidate_name": "LiquidEOS",
     "website": "https://liquideos.com/",
-    "code_of_conduct":"",
+    "code_of_conduct":"https://steemit.com/bancor/@bancor-network/announcing-bancor-as-an-eos-block-producer-candidate",
     "email":"block_producer@liquideos.com",
     "branding":{
       "logo_256":"",
@@ -19,14 +19,14 @@
       "longitude": 0
     },
     "social": {
-      "steemit": "",
-      "twitter": "",
-      "youtube": "",
-      "facebook": "",
-      "github":"",
-      "reddit": "",
+      "steemit": "https://steemit.com/@bancor-network",
+      "twitter": "https://twitter.com/LiquidEOS",
+      "youtube": "https://www.youtube.com/channel/UCA125wWsdbsG1XPenWcBkyg",
+      "facebook": "https://www.facebook.com/bancor/",
+      "github":"https://github.com/bancorprotocol",
+      "reddit": "https://www.reddit.com/r/Bancor/",
       "keybase": "tmuskal",
-      "telegram": "",
+      "telegram": "https://t.me/BPLiquidEOS",
       "wechat":""
     }
   },
