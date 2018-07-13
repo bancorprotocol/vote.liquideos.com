@@ -39,7 +39,6 @@
         "longitude": 34.8924067
       },
       "node_type": "full",
-      "is_producer": false,
       "p2p_endpoint": "node2.liquideos.com:9876",
       "api_endpoint": "http://node2.liquideos.com",
       "ssl_endpoint": "https://node2.liquideos.com"
