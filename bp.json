@@ -4,8 +4,8 @@
   "producer_public_key": "EOS4v1n2j5kXbCum8LLEc8zQLpeLK9rKVFmsUgLCWgMDN38P6PcrW",
   "org": {
     "candidate_name": "LiquidEOS",
-    "website": "https://liquideos.com/",
-    "code_of_conduct":"",
+    "website": "https://liquideos.com",
+    "code_of_conduct":"https://steemit.com/bancor/@bancor-network/announcing-bancor-as-an-eos-block-producer-candidate",
     "email":"block_producer@liquideos.com",
     "branding":{
       "logo_256":"",
@@ -14,9 +14,9 @@
     },
     "location": {
       "name": "Israel",
-      "country": "Israel",
-      "latitude": 0,
-      "longitude": 0
+      "country": "IL",
+      "latitude": 32.082652,
+      "longitude": 34.781132
     },
     "social": {
       "steemit": "bancor-network",
@@ -35,37 +35,14 @@
       "location": {
         "name": "Israel - Center",
         "country": "Israel",
-        "latitude": 0,
-        "longitude": 0
+        "latitude": 32.0904935,
+        "longitude": 34.8924067
       },
+      "node_type": "full,
       "is_producer": false,
       "p2p_endpoint": "node2.liquideos.com:9876",
-      "api_endpoint": "http://node2.liquideos.com:80",
-      "ssl_endpoint": "https://node2.liquideos.com:443"
-    },
-    {
-      "location": {
-        "name": "Israel - North",
-        "country": "Israel",
-        "latitude": 0,
-        "longitude": 0
-      },
-      "is_producer": false,
-      "p2p_endpoint": "node1.liquideos.com:9876",
-      "api_endpoint": "http://node2.liquideos.com:80",
-      "ssl_endpoint": "https://node2.liquideos.com:443"
-    },
-    {  
-	"location": {
-        "name": "Israel",
-        "country": "Israel",
-        "latitude": 0,
-        "longitude": 0
-      },
-      "is_producer": true,
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "api_endpoint": "http://node2.liquideos.com",
+      "ssl_endpoint": "https://node2.liquideos.com"
     }
   ]
 }
