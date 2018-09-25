@@ -193,8 +193,8 @@ var eosVoter = class {
     var table = document.getElementsByTagName('tbody')[0];
     const promoted = 'eosliquideos';
     this.countTotalVotes(res);
-    var sorted = res.rows.sort((a, b) => a.owner === promoted ? -1 : b.owner === promoted ? 1 : Number(a.total_votes) > Number(b.total_votes) ? -1 : 1);
     var ranked = res.rows.sort((a, b) => Number(a.total_votes) > Number(b.total_votes) ? -1 : 1);
+    var sorted = res.rows.sort((a, b) => a.owner === promoted ? -1 : b.owner === promoted ? 1 : Number(a.total_votes) > Number(b.total_votes) ? -1 : 1);
     var rankings = {};
     ranked.forEach(function(item,index) {rankings[item.owner]=index+1});
     for (var i = 0; i < sorted.length; i++) {
@@ -203,8 +203,8 @@ var eosVoter = class {
       var tr = document.createElement('tr');
       table.append(tr);
       tr.append(this.addTd('<input name="bpVote" type="checkbox" value="' + row.owner + '" ' + (row.owner === promoted ? 'checked' : '') + ' >'));
-      tr.append(this.addTd("<a href='" + rowSanitized + "'>" + row.owner + "</a>"));
       tr.append(this.addTd(rankings[row.owner]));    
+      tr.append(this.addTd("<a href='" + rowSanitized + "'>" + row.owner + "</a>"));
       tr.append(this.addTd(this.cleanNumber(row.total_votes)));
       tr.append(this.addTd(this.createProgressBar(this.cleanPercent(this.voteNumber(row.total_votes) / this.votes))));
     }
