@@ -193,10 +193,12 @@ var eosVoter = class {
     var table = document.getElementsByTagName('tbody')[0];
     const promoted = 'eosliquideos';
     this.countTotalVotes(res);
-    var ranked = res.rows.sort((a, b) => Number(a.total_votes) > Number(b.total_votes) ? -1 : 1);
-    var sorted = res.rows.sort((a, b) => a.owner === promoted ? -1 : b.owner === promoted ? 1 : Number(a.total_votes) > Number(b.total_votes) ? -1 : 1);
+    var ranked = res.rows.slice(0);
+    var sorted = res.rows.slice(0);
     var rankings = {};
-    ranked.forEach(function(item,index) {rankings[item.owner]=index+1});
+    ranked.sort((a, b) => Number(a.total_votes) > Number(b.total_votes) ? -1 : 1);
+    sorted.sort((a, b) => a.owner === promoted ? -1 : b.owner === promoted ? 1 : Number(a.total_votes) > Number(b.total_votes) ? -1 : 1);
+    ranked.forEach(function(item,index) {rankings[item.owner]=index+1;});
     for (var i = 0; i < sorted.length; i++) {
       var row = sorted[i];
       var rowSanitized = sanitizeUrl(row.url);
