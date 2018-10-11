@@ -9,9 +9,9 @@
     "ownership_disclosure" : "https://medium.com/@liquideos/liquideos-ownership-disclosure-7896226402bf",
     "email":"block_producer@liquideos.com",
     "branding":{
-      "logo_256":"",
+      "logo_256":"https://github.com/LiquidEOS/vote.liquideos.com/blob/master/LiquidEOS_Logo_1024x256.jpg",
       "logo_1024":"",
-      "logo_svg":""
+      "logo_svg":"https://github.com/LiquidEOS/vote.liquideos.com/blob/master/LiquidEOS_Logo-03.svg"
     },
     "location": {
       "name": "Israel",
