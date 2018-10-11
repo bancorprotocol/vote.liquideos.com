@@ -1,4 +1,3 @@
-
 {
   "producer_account_name": "eosliquideos",
   "producer_public_key": "EOS4v1n2j5kXbCum8LLEc8zQLpeLK9rKVFmsUgLCWgMDN38P6PcrW",
@@ -9,9 +8,9 @@
     "ownership_disclosure" : "https://medium.com/@liquideos/liquideos-ownership-disclosure-7896226402bf",
     "email":"block_producer@liquideos.com",
     "branding":{
-      "logo_256":"https://vote.liquideos.com/blob/master/LiquidEOS_Logo_1024x256.jpg",
+      "logo_256":"https://vote.liquideos.com/LiquidEOS_Logo_1024x256.jpg",
       "logo_1024":"",
-      "logo_svg":"https://vote.liquideos.com/blob/master/LiquidEOS_Logo-03.svg"
+      "logo_svg":"https:/vote.liquideos.com/LiquidEOS_Logo-03.svg"
     },
     "location": {
       "name": "Israel",
