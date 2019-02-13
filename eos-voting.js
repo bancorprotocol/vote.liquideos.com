@@ -173,7 +173,7 @@ var eosVoter = class {
         var resRows = res.rows;
         var lastKey = resRows[resRows.length - 1].owner;        
         resRows.pop();
-        return this.populateBPs(lastKey).then((res2)=>{
+        return this._populateBPs(lastKey).then((res2)=>{
             return res2.concat(resRows);
         });        
     });
