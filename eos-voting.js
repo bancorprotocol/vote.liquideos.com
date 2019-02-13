@@ -155,15 +155,6 @@ var eosVoter = class {
     var msg = '<div class="alert alert-danger">' + res.message + '</div>';
     document.getElementById("messages").innerHTML = msg;
   }
-
-  populateBPs() {
-    // populate producer table
-    return _populateBPs().then((rows)=>{
-      return {
-         rows
-      }
-    });
-  }
   _populateBPs(next) {
     // populate producer table
     var q = {
@@ -187,6 +178,15 @@ var eosVoter = class {
         });        
     });
   }
+  populateBPs() {
+    // populate producer table
+    return _populateBPs().then((rows)=>{
+      return {
+         rows
+      }
+    });
+  }
+
 
   refreshBPs() {
     var eosOptions = {};
