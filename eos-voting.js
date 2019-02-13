@@ -170,11 +170,11 @@ var eosVoter = class {
     return this.eosPublic.getTableRows(q).then((res)=>{
         if(!res.more)
           return res.rows;
-        
-        var lastKey = res.rows[res.rows.length - 1].owner;
-        res.pop();
+        var resRows = res.rows;
+        var lastKey = resRows[resRows.length - 1].owner;        
+        resRows.pop();
         return this.populateBPs(lastKey).then((res2)=>{
-            return res2.concat(res);
+            return res2.concat(resRows);
         });        
     });
   }
