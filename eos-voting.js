@@ -158,12 +158,33 @@ var eosVoter = class {
 
   populateBPs() {
     // populate producer table
-    return this.eosPublic.getTableRows({
+    return _populateBPs().then((rows)=>{
+      return {
+         rows
+      }
+    });
+  }
+  _populateBPs(next) {
+    // populate producer table
+    var q = {
       "json": true,
       "scope": 'eosio',
       "code": 'eosio',
       "table": "producers",
-      "limit": 500
+      "limit": 1000
+    };
+    if(next)
+      q.lower_bound = next;
+    
+    return this.eosPublic.getTableRows(q).then((res)=>{
+        if(!res.more)
+          return res.rows;
+        
+        var lastKey = res.rows[res.rows.length - 1].owner;
+        res.pop();
+        return populateBPs(lastKey).then((res2)=>{
+            return res2.concat(res);
+        });        
     });
   }
 
